@@ -44,18 +44,18 @@ export function format(obj: MediaType): string {
   const { type, subtype, suffix } = obj;
 
   if (!type || !typeNameRegExp.test(type)) {
-    throw new TypeError(`Invalid type: ${type}`);
+    throw new TypeError(`Invalid type: ${JSON.stringify(type)}`);
   }
 
   if (!subtype || !subtypeNameRegExp.test(subtype)) {
-    throw new TypeError(`Invalid subtype: ${subtype}`);
+    throw new TypeError(`Invalid subtype: ${JSON.stringify(subtype)}`);
   }
 
   let str = type + "/" + subtype;
 
   if (suffix !== undefined) {
     if (!typeNameRegExp.test(suffix)) {
-      throw new TypeError(`Invalid suffix: ${suffix}`);
+      throw new TypeError(`Invalid suffix: ${JSON.stringify(suffix)}`);
     }
 
     str += "+" + suffix;
@@ -69,7 +69,7 @@ export function format(obj: MediaType): string {
  */
 export function parse(str: string): MediaType {
   if (!typeRegExp.test(str)) {
-    throw new TypeError(`Invalid media type: ${str}`);
+    throw new TypeError(`Invalid media type: ${JSON.stringify(str)}`);
   }
 
   const slashIndex = str.indexOf("/");
