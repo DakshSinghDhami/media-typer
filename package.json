@@ -1,6 +1,6 @@
 {
   "name": "media-typer",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Simple RFC 6838 media type parser and formatter",
   "repository": "jshttp/media-typer",
   "funding": {
