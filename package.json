@@ -44,5 +44,9 @@
   ],
   "ts-scripts": {
     "project": "tsconfig.build.json"
+  },
+  "homepage": "https://github.com/jshttp/media-typer",
+  "bugs": {
+    "url": "https://github.com/jshttp/media-typer/issues"
   }
 }
